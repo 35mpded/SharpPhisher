@@ -1,6 +1,14 @@
 # SharpPhisher
  A C# Phishing tool aimed to assist Red Teams in security assessments by phishing credentials from unaware users.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SubXi/SharpPhisher/main/imgs/flask.png">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SubXi/SharpPhisher/main/imgs/control_rundll.png">
+</p>
+
 The tool utilizes [CredUIPromptForWindowsCredentials WinAPI function](https://docs.microsoft.com/en-us/windows/win32/api/wincred/nf-wincred-creduipromptforwindowscredentialsa) and Managed DLL Exports to capture credentials when executed using rundll32.exe on target system, the captured credentials are transmitted over HTTPS to a remote Flask Python server.
 
 The Managed DLL exports are implemented for an attacker to mimic legitimate activity like `rundll32.exe shell32.dll,Control_RunDLL` in order to avoid raising suspicion/detection by Blue Teams and users as much as possible, for example: `rundll32.exe shell64.dll,Control_RunDLL`
